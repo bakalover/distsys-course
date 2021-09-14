@@ -18,7 +18,8 @@
     "twist-src",
     "await-src",
     "timber-src",
-    "fmtlib-src/include"
+    "fmtlib-src/include",
+    "cereal-src/include"
   ],
   "forbidden_patterns": [
   ]
