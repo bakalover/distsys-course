@@ -1,0 +1,9 @@
+{
+  "Debug": [
+    "CMAKE_BUILD_TYPE=Debug",
+    "UBSAN=ON"
+  ],
+  "Release": [
+    "CMAKE_BUILD_TYPE=Release"
+  ]
+}
