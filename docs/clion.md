@@ -49,6 +49,33 @@
 
 ![Setup remote host](images/profile.png)
 
+### Шаг 3.5 (для CLion >= 2021.2)
+
+Если закрыть настройки, CLion захочет собрать CMake проект, но перед этим
+начнёт копировать все файлы из хост системы в ремоут (контейнер).
+Эту лишнюю синхронизацию можно избежать, если у вас свежий CLion (>= 2021.2).
+
+Зайдите в `Preferences` > `Build, Execution, Deployment` > `Deployment`.
+Там должен появиться новый деплоймент для проекта
+(обратите внимание на набор символов `(bcfdf...` -- так CLion называет
+автоматически сгенерированные деплойменты):
+
+![Deployment auto](images/deployment/auto.png)
+
+Вам нужно его отредактировать (**важно**: нельзя создать и менять новый).
+
+Измените тип на `Local or mounted folder` в табе `Connection`:
+
+![Deployment type](images/deployment/docker-type.png)
+
+И в табе `Mappings` укажите пути до директорий `workspace` как в хост системе, 
+так и в контейнере:
+
+![Deployment mappings](images/deployment/docker-mappings.png)
+
+Убедитесь, что в `File Transfer` больше не генерируются новые логи о загрузке 
+файлов в `/tmp/tmp...`.
+
 ### Шаг 4
 
 Исключите из синхронизации с контейнером директории `build` и `client` из корня репозитория:
