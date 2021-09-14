@@ -78,8 +78,7 @@ atlassian-ide-plugin.xml
 
 # Idea
 .idea/
-cmake-build-debug/
-cmake-build-release/
+cmake-build-*
 
 # VS code
 .vscode/
