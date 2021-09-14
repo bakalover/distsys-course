@@ -1,0 +1,6 @@
+- group:    Tutorial
+  start:    01-09-2021 00:00
+  deadline: 01-01-2025 00:00
+  tasks:
+    - task: tutorial/aplusb
+      score: 1
