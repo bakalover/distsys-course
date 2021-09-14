@@ -2,7 +2,8 @@
   "build_dir": "/tmp/clippy-build",
   "task_ci_config": ".grade.gitlab-ci.yml",
   "default_assignee": "Lipovsky",
-  "master_branch": "master",
+  "repo_master": "main",
+  "solutions_master": "master",
   "warmup_targets": [
     "wheels",
     "await"
