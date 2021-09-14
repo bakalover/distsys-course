@@ -69,7 +69,7 @@ clippy attach {solutions-repo-url}
 
 Команда будет выглядеть примерно так:
 ```shell
-clippy attach https://gitlab.com/distsys-course-2021/test-roman-lipovsky-u-lipovsky
+clippy attach https://gitlab.com/distsys-course-2021/test-z-roman-z-lipovsky-z-lipovsky
 ```
 
 Команду `attach` можно выполнить повторно: предыдущая локальная копия сотрется (с вашего явного разрешения), но это не страшно, если вы запушили все ваши коммиты с помощью `clippy push`.
@@ -78,7 +78,7 @@ clippy attach https://gitlab.com/distsys-course-2021/test-roman-lipovsky-u-lipov
 
 Можно аттачить репозиторий иначе:
 ```shell
-clippy attach git@gitlab.com:distsys-course-2021/test-roman-lipovsky-u-lipovsky
+clippy attach git@gitlab.com:distsys-course-2021/test-z-roman-z-lipovsky-z-lipovsky
 ```
 Для этого нужно настроить SSH в контейнере, зато потом можно будет не вводить логин и пароль для каждого пуша.
 
