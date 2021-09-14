@@ -4,3 +4,10 @@
   tasks:
     - task: tutorial/aplusb
       score: 1
+
+- group:    Reliable Channel
+  start:    01-09-2021 00:00
+  deadline: 01-01-2025 00:00
+  tasks:
+    - task: all-tasks/1-reliable-channel
+      score: 150
