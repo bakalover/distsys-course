@@ -43,7 +43,8 @@ class TimerService : public await::time::ITimerService {
 
   // ITimerService
 
-  await::futures::Future<void> AfterJiffies(await::time::Jiffies delay) override;
+  await::futures::Future<void> AfterJiffies(
+      await::time::Jiffies delay) override;
 
  private:
   await::futures::Future<void> AfterImpl(Duration delay);

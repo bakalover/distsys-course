@@ -17,8 +17,8 @@ static std::string ThisFiberName() {
 }
 
 void LogBackend::Log(timber::Event event) {
-  fmt::print("[T {:<4}] -- {:<5} -- {:<10} -- {:<7} -- {}\n", clock_.Now(), event.level,
-             event.component, ThisFiberName(), event.message);
+  fmt::print("[T {:<4}] -- {:<5} -- {:<10} -- {:<7} -- {}\n", clock_.Now(),
+             event.level, event.component, ThisFiberName(), event.message);
 }
 
 }  // namespace runtime::matrix
