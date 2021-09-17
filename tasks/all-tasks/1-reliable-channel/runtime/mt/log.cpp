@@ -22,8 +22,7 @@ void LogBackend::Log(timber::Event event) {
   std::lock_guard guard(log_mutex_);
 
   std::cout << event.level << "\t" << event.component << "\t"
-            << std::this_thread::get_id() << '\t' << ThisFiberName() << '\t'
-            << event.message << std::endl;
+            << std::this_thread::get_id() << '\t' << ThisFiberName() << '\t' << event.message << std::endl;
 }
 
 }  // namespace runtime::mt

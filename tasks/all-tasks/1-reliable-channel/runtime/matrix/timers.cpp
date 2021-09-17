@@ -4,7 +4,11 @@ using await::futures::Future;
 
 namespace runtime::matrix {
 
-Future<void> TimerService::After(Duration delay) {
+Future<void> TimerService::AfterJiffies(await::time::Jiffies delay) {
+  return AfterImpl(std::chrono::milliseconds(delay));
+}
+
+Future<void> TimerService::AfterImpl(Duration delay) {
   auto deadline = clock_.ToDeadLine(delay);
 
   auto [f, p] = await::futures::MakeContract<void>();

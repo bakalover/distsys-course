@@ -1,5 +1,7 @@
 #pragma once
 
+#include <rpc/time_units.hpp>
+
 #include <algorithm>
 #include <chrono>
 
