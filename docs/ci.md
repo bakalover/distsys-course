@@ -128,7 +128,8 @@ clippy show-config
 
 Установите токен для консольного клиента:
 ```shell
-clippy config gitlab.token {gitlab-token}
+# Магический разделитель -- нужен на случай дефисов в начале токена
+clippy config -- gitlab.token {gitlab-token}
 ```
 
 Здесь `{gitlab-token}` – токен, полученный вами на предыдущем шаге.
