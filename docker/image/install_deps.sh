@@ -17,7 +17,7 @@ apt-add-repository 'deb https://apt.kitware.com/ubuntu/ focal main'
 apt-get update
 
 apt-get install -y \
-  cmake \
+	cmake \
 	ninja-build \
 	ssh \
 	git \
