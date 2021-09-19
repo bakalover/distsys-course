@@ -7,7 +7,7 @@
 
 - group:    Reliable Channel
   start:    01-09-2021 00:00
-  deadline: 26-09-2021 00:00
+  deadline: 26-09-2021 23:59
   tasks:
     - task: all-tasks/1-reliable-channel
       score: 150
