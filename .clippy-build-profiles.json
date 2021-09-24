@@ -1,9 +1,11 @@
 {
   "Debug": [
     "CMAKE_BUILD_TYPE=Debug",
-    "UBSAN=ON"
+    "UBSAN=ON",
+    "MUESLI_ARCHIVE=JSON"
   ],
   "Release": [
-    "CMAKE_BUILD_TYPE=Release"
+    "CMAKE_BUILD_TYPE=Release",
+    "MUESLI_ARCHIVE=BINARY"
   ]
 }

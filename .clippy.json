@@ -6,7 +6,10 @@
   "solutions_master": "master",
   "warmup_targets": [
     "wheels",
-    "await"
+    "await",
+    "commute",
+    "whirl-frontend",
+    "whirl-matrix"
   ],
   "tidy_compiler_options": [
     "-std=c++20"
@@ -18,8 +21,13 @@
     "twist-src",
     "await-src",
     "timber-src",
+    "commute-src",
+    "muesli-src",
+    "whirl-frontend-src",
+    "whirl-matrix-src",
     "fmtlib-src/include",
-    "cereal-src/include"
+    "cereal-src/include",
+    "ctti-src/include"
   ],
   "forbidden_patterns": [
   ]

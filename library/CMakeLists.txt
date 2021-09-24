@@ -57,13 +57,11 @@ FetchContent_MakeAvailable(timber)
 
 # --------------------------------------------------------------------
 
-message(STATUS "FetchContent: cereal")
+message(STATUS "FetchContent: whirl-matrix")
 
 FetchContent_Declare(
-        cereal
-        GIT_REPOSITORY https://github.com/USCiLab/cereal.git
-        GIT_TAG master
+        whirl-matrix
+        GIT_REPOSITORY https://gitlab.com/whirl-framework/whirl-matrix.git
+        GIT_TAG stable
 )
-# FetchContent_MakeAvailable(cereal)
-FetchContent_Populate("cereal")
-set(cereal_INCLUDE_DIR "${cereal_SOURCE_DIR}/include" PARENT_SCOPE)
+FetchContent_MakeAvailable(whirl-matrix)
