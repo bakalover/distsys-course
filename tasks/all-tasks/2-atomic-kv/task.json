@@ -5,7 +5,7 @@
       "targets": ["tests-1"],
       "args": [
         "--det",
-        "--sims", "15000",
+        "--sims", "30000",
         "--quiet"
       ]
     }
