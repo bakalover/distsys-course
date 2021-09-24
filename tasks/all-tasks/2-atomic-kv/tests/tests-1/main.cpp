@@ -224,18 +224,20 @@ size_t RunSimulation(size_t seed) {
   // Adversaries
 
   if (random.Maybe(3)) {
-    // Network partitions
-    world.AddAdversary(NetAdversary);
-  }
+    if (random.Maybe(3)) {
+      // Network partitions
+      world.AddAdversary(NetAdversary);
+    }
 
-  if (random.Maybe(7)) {
-    // Reboots, pauses
-    world.AddAdversary(NodeAdversary);
-  }
+    if (random.Maybe(7)) {
+      // Reboots, pauses
+      world.AddAdversary(NodeAdversary);
+    }
 
-  if (random.Maybe(11)) {
-    // Crashes
-    world.AddAdversary(NodeReeper);
+    if (random.Maybe(11)) {
+      // Crashes
+      world.AddAdversary(NodeReeper);
+    }
   }
 
   // Log file
