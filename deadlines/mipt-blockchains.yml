@@ -11,3 +11,10 @@
   tasks:
     - task: all-tasks/1-reliable-channel
       score: 150
+
+- group:    Atomic KV
+  start:    01-09-2021 00:00
+  deadline: 10-10-2021 23:59
+  tasks:
+    - task: all-tasks/2-atomic-kv
+      score: 300

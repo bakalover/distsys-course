@@ -1,13 +1,20 @@
 - group:    Tutorial
   start:    01-09-2021 00:00
-  deadline: 01-01-2025 00:00
+  deadline: 01-01-2025 23:59
   tasks:
     - task: tutorial/aplusb
       score: 1
 
 - group:    Reliable Channel
   start:    01-09-2021 00:00
-  deadline: 01-01-2025 00:00
+  deadline: 01-01-2025 23:59
   tasks:
     - task: all-tasks/1-reliable-channel
       score: 150
+
+- group:    Atomic KV
+  start:    01-09-2021 00:00
+  deadline: 01-01-2025 23:59
+  tasks:
+    - task: all-tasks/2-atomic-kv
+      score: 300
