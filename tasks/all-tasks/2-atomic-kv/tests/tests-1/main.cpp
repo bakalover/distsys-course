@@ -152,8 +152,8 @@ void NodeAdversary() {
 
 //////////////////////////////////////////////////////////////////////
 
-void NodeReeper() {
-  timber::Logger logger_{"Node-Reeper", node::rt::LoggerBackend()};
+void NodeReaper() {
+  timber::Logger logger_{"Node-Reaper", node::rt::LoggerBackend()};
 
   // List system nodes
   auto pool = node::rt::Discovery()->ListPool("kv");
@@ -236,7 +236,7 @@ size_t RunSimulation(size_t seed) {
 
     if (random.Maybe(11)) {
       // Crashes
-      world.AddAdversary(NodeReeper);
+      world.AddAdversary(NodeReaper);
     }
   }
 
