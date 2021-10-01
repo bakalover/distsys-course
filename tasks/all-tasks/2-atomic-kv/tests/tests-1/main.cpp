@@ -246,6 +246,9 @@ size_t RunSimulation(size_t seed) {
   if (log_fpath) {
     world.WriteLogTo(*log_fpath);
   }
+  if (auto path = runner.TraceFile()) {
+    world.WriteTraceTo(*path);
+  }
 
   // Globals
   world.SetGlobal("keys", keys);
