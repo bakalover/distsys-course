@@ -4,7 +4,7 @@ task_link_libraries(whirl-frontend)
 
 # Task libraries
 add_task_library(kv/node atomic-kv-node)
-add_task_library(kv/node atomic-kv-client)
+add_task_library(kv/client atomic-kv-client)
 
 # Tests
 task_link_libraries(whirl-matrix)
