@@ -12,9 +12,9 @@
     - task: all-tasks/1-reliable-channel
       score: 150
 
-- group:    Atomic KV
+- group:    Single-Decree Paxos
   start:    01-09-2021 00:00
-  deadline: 03-10-2021 23:59
+  deadline: 17-10-2025 23:59
   tasks:
-    - task: all-tasks/2-atomic-kv
+    - task: all-tasks/3-sd-paxos
       score: 300
