@@ -21,7 +21,7 @@
 
 - group:    Single-Decree Paxos
   start:    01-09-2021 00:00
-  deadline: 17-10-2025 23:59
+  deadline: 17-10-2021 23:59
   tasks:
     - task: all-tasks/3-sd-paxos
       score: 300
