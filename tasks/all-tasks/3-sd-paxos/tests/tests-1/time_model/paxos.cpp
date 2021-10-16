@@ -89,6 +89,10 @@ class PaxosTimeModel : public ITimeModel {
 
   // Network
 
+  Jiffies EstimateRtt() const override {
+    return 1000;
+  }
+
   Jiffies FlightTime(const net::IServer* /*start*/, const net::IServer* /*end*/,
                      const net::Packet& /*packet*/) override {
     if (GlobalRandomNumber() % slow_message_freq_ == 0) {
