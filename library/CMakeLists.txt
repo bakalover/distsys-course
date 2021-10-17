@@ -13,6 +13,17 @@ include(FetchContent)
 
 # --------------------------------------------------------------------
 
+message(STATUS "FetchContent: whirl-matrix")
+
+FetchContent_Declare(
+        whirl-matrix
+        GIT_REPOSITORY https://gitlab.com/whirl-framework/whirl-matrix.git
+        GIT_TAG stable
+)
+FetchContent_MakeAvailable(whirl-matrix)
+
+# --------------------------------------------------------------------
+
 message(STATUS "FetchContent: wheels")
 
 FetchContent_Declare(
@@ -54,14 +65,3 @@ FetchContent_Declare(
         GIT_TAG main
 )
 FetchContent_MakeAvailable(timber)
-
-# --------------------------------------------------------------------
-
-message(STATUS "FetchContent: whirl-matrix")
-
-FetchContent_Declare(
-        whirl-matrix
-        GIT_REPOSITORY https://gitlab.com/whirl-framework/whirl-matrix.git
-        GIT_TAG stable
-)
-FetchContent_MakeAvailable(whirl-matrix)
