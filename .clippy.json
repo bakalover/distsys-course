@@ -22,6 +22,7 @@
     "await-src",
     "timber-src",
     "commute-src",
+    "persist-src",
     "muesli-src",
     "whirl-frontend-src",
     "whirl-matrix-src",
