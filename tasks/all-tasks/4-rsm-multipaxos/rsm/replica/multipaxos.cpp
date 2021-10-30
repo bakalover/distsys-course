@@ -55,7 +55,7 @@ class MultiPaxos : public IReplica {
     // Open log on disk
     log_.Open();
 
-    // Start pipeline fibers
+    // Launch pipeline fibers
     // ...
 
     // Register RPC services
