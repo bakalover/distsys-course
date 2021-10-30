@@ -25,3 +25,10 @@
   tasks:
     - task: all-tasks/3-sd-paxos
       score: 300
+
+- group:    Multi-Paxos
+  start:    01-09-2021 00:00
+  deadline: 16-11-2021 23:59
+  tasks:
+    - task: all-tasks/4-multipaxos
+      score: 500
