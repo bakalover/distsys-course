@@ -107,7 +107,7 @@ void NetAdversary() {
 size_t RunSimulation(size_t seed) {
   auto& runner = matrix::TestRunner::Access();
 
-  static const Jiffies kTimeLimit = 256000_jfs;
+  static const Jiffies kTimeLimit = 128000_jfs;
 
   runner.Verbose() << "Simulation seed: " << seed << std::endl;
 
