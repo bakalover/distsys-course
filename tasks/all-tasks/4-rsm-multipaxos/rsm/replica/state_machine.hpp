@@ -19,12 +19,12 @@ struct IStateMachine {
 
   // Applies command
   // Returns serialized operation response
-  virtual muesli::Bytes Apply(Command command) = 0;
+  virtual muesli::Bytes Apply(const Command& command) = 0;
 
   // Snapshots
 
   virtual muesli::Bytes MakeSnapshot() = 0;
-  virtual void InstallSnapshot(muesli::Bytes snapshot) = 0;
+  virtual void InstallSnapshot(const muesli::Bytes& snapshot) = 0;
 };
 
 using IStateMachinePtr = std::shared_ptr<IStateMachine>;

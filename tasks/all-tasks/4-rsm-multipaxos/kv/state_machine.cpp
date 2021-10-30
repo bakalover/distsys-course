@@ -15,7 +15,7 @@ class StateMachine : public rsm::IStateMachine {
  public:
   // IStateMachine
 
-  muesli::Bytes Apply(rsm::Command cmd) override {
+  muesli::Bytes Apply(const rsm::Command& cmd) override {
     if (cmd.type == "Set") {
       return Apply<Set>(cmd);
     } else if (cmd.type == "Get") {
@@ -34,7 +34,7 @@ class StateMachine : public rsm::IStateMachine {
     return muesli::Serialize(store_.MakeSnapshot());
   }
 
-  void InstallSnapshot(muesli::Bytes snapshot) override {
+  void InstallSnapshot(const muesli::Bytes& snapshot) override {
     auto entries = muesli::Deserialize<Store::EntriesList>(snapshot);
     store_.Install(entries);
   }
@@ -54,7 +54,7 @@ class StateMachine : public rsm::IStateMachine {
   }
 
   template <typename Op>
-  muesli::Bytes Apply(rsm::Command cmd) {
+  muesli::Bytes Apply(const rsm::Command& cmd) {
     auto request = muesli::Deserialize<typename Op::Request>(cmd.request);
     auto response = ApplyImpl(request);
     return muesli::Serialize(response);
