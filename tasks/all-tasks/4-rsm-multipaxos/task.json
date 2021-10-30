@@ -14,7 +14,7 @@
       "targets": ["tests-1"],
       "args": [
         "--det",
-        "--sims", "5000",
+        "--sims", "10000",
         "--quiet"
       ]
     }
