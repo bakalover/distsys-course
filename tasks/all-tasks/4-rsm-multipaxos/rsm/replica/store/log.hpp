@@ -5,6 +5,9 @@
 #include <persist/fs/path.hpp>
 #include <persist/rsm/log/log.hpp>
 
+#include <memory>
+#include <optional>
+
 namespace rsm {
 
 // Persistent log
