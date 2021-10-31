@@ -11,7 +11,7 @@
     },
     {
       "profiles": ["Release"],
-      "targets": ["tests-1"],
+      "targets": ["tests-2"],
       "args": [
         "--det",
         "--sims", "10000",
