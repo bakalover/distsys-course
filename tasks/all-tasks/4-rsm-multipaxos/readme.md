@@ -72,9 +72,9 @@ _There are only two hard problems in distributed systems: 2. Exactly-once delive
 
 Каждая запись в логе хранит состояние acceptor-а из алгоритма Single-Decree Paxos.
 
-Класс `Log` – простая обертка над реализацией интерфейса [`persist::rsm::ILog`](https://gitlab.com/whirl-framework/persist/-/blob/master/persist/rsm/log/log.hpp), изучите его возможности.
+Класс `Log` – простая обертка над реализацией интерфейса [`persist::rsm::multipaxos::IRandomAccessLog`](https://gitlab.com/whirl-framework/persist/-/blob/master/persist/rsm/multipaxos/log/log.hpp), изучите его возможности.
 
-Интерфейс `ILog` не предполагает конкурентного доступа. Если вы собираетесь обращаться к логу из разных потоков / файберов, то должны самостоятельно продумать синхронизацию.
+Интерфейс `IRandomAccessLog` не предполагает конкурентного доступа. Если вы собираетесь обращаться к логу из разных потоков / файберов, то должны самостоятельно продумать синхронизацию.
 
 ### Компактификация лога и снимки состояния
 
@@ -88,7 +88,7 @@ _There are only two hard problems in distributed systems: 2. Exactly-once delive
 1) суффиксом лога команд и 
 2) снимком состояния для отрезанного префикса.
 
-Отрезать префикс от `ILog` можно с помощью метода `TruncatePrefix`.
+Отрезать префикс от `IRandomAccessLog` можно с помощью метода `TruncatePrefix`.
 
 Автомат умеет фиксировать свое текущее состояние с помощью метода `MakeSnapshot` и устанавливать его с помощью метода `InstallSnapshot`.
 
@@ -97,6 +97,9 @@ _There are only two hard problems in distributed systems: 2. Exactly-once delive
 Подумайте, какие данные должны войти в снимок состояния RSM помимо снимка состояния автомата.
 
 Директорию для хранения лога / снимков состояния можно узнать из конфига по ключу `rsm.store.dir`.
+
+Если вы используете `TruncatePrefix`, то используйте [сегментированный лог](https://gitlab.com/whirl-framework/persist/-/blob/master/persist/rsm/multipaxos/log/segmented/log.hpp) в качестве реализации
+интерфейса `IRandomAccessLog`.
 
 ## Exactly-once
 
