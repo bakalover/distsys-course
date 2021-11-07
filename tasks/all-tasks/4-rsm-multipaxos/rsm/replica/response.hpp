@@ -2,6 +2,7 @@
 
 #include <muesli/bytes.hpp>
 #include <muesli/empty.hpp>
+#include <muesli/serializable.hpp>
 
 #include <string>
 #include <variant>
