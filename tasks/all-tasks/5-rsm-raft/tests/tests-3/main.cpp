@@ -170,8 +170,6 @@ void MakePartition() {
 void LeaderAdversary() {
   timber::Logger logger_{"Leader-Adversary", node::rt::LoggerBackend()};
 
-  auto& net = matrix::fault::Network();
-
   // List system nodes
   auto pool = node::rt::Discovery()->ListPool("rsm");
 
@@ -324,11 +322,6 @@ size_t RunSimulation(size_t seed) {
 
   // For rsm
   world.SetGlobal<std::string>("config.rsm.store.dir", "/rsm/store");
-
-  // For paxos
-  world.SetGlobal<int64_t>("config.paxos.backoff.init", 100);
-  world.SetGlobal<int64_t>("config.paxos.backoff.max", 3000);
-  world.SetGlobal<int64_t>("config.paxos.backoff.factor", 2);
 
   // Run simulation
 

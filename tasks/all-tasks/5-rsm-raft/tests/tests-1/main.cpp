@@ -164,11 +164,6 @@ size_t RunSimulation(size_t seed) {
   // For rsm
   world.SetGlobal<std::string>("config.rsm.store.dir", "/rsm/store");
 
-  // For paxos
-  world.SetGlobal<int64_t>("config.paxos.backoff.init", 100);
-  world.SetGlobal<int64_t>("config.paxos.backoff.max", 2000);
-  world.SetGlobal<int64_t>("config.paxos.backoff.factor", 2);
-
   // Run simulation
 
   world.Start();
