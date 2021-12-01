@@ -9,6 +9,8 @@
 #include <cereal/types/utility.hpp>
 #include <cereal/types/vector.hpp>
 
+#include <wheels/support/panic.hpp>
+
 namespace kv {
 
 class StateMachine : public rsm::IStateMachine {
@@ -23,7 +25,7 @@ class StateMachine : public rsm::IStateMachine {
     } else if (cmd.type == "Cas") {
       return Apply<Cas>(cmd);
     }
-    std::abort();
+    WHEELS_PANIC("Unknown command type: " << cmd.type);
   }
 
   void Reset() override {
