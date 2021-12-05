@@ -35,7 +35,7 @@
 
 - group:    Raft
   start:    01-09-2021 00:00
-  deadline: 08-12-2021 23:59
+  deadline: 12-12-2021 23:59
   tasks:
     - task: all-tasks/5-rsm-raft
       score: 500
