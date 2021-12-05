@@ -36,7 +36,7 @@ class Log {
   void TruncatePrefix(size_t index);
 
  private:
-  using ILogImpl = persist::rsm::raft::IContiguousLog;
+  using ILogImpl = persist::rsm::raft::IContinuousLog;
 
   std::shared_ptr<ILogImpl> MakeLogImpl(persist::fs::IFileSystem* fs,
                                         const persist::fs::Path& store_dir);
